@@ -52,7 +52,8 @@ function prompt_que_pwd {
     _prompt_que_pwd="$MATCH"
     unset MATCH
   else
-    _prompt_que_pwd="${${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}%/}/${pwd:t}"
+    _prompt_que_pwd="$pwd"
+    #_prompt_que_pwd="${${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}%/}/${pwd:t}"
   fi
 }
 
