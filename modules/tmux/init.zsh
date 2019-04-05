@@ -38,8 +38,8 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && -z "$VSCOD
       set-option -t "$tmux_session" destroy-unattached off &> /dev/null
   fi
 
-  # Attach to the session name requested in an environment variable or the default (detaching others)
-  exec tmux $_tmux_iterm_integration attach-session -t "$tmux_session" -d
+  # Attach to the session name requested in an environment variable or the default
+  exec tmux $_tmux_iterm_integration attach-session -t "$tmux_session"
 fi
 
 #
